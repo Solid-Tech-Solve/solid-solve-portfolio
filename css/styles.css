@@ -79,7 +79,7 @@ header {
     }
 }
 
-.bg-section:nth-of-type(2), .bg-section:nth-of-type(3), .bg-section:nth-of-type(4), .bg-section:nth-of-type(5), .bg-section:nth-of-type(6) {
+.bg-section:nth-of-type(2), .bg-section:nth-of-type(3), .bg-section:nth-of-type(4), .bg-section:nth-of-type(5), .bg-section:nth-of-type(6), .bg-section:nth-of-type(7) {
     display: grid;
     justify-content: center;
     padding-top: calc(121px + 60px);;
@@ -285,6 +285,24 @@ header {
                 }
             }
         }
+    }
+
+}
+
+.bg-section:nth-of-type(7) {
+    padding-bottom: 107px;
+    margin: 0 auto;
+    
+
+    & .title img {
+        top: -70px;
+    }
+
+    & button {
+        max-width: 222px;
+        height: 50px;
+        width: 100%;
+        margin: 0 auto;
     }
 
 }
