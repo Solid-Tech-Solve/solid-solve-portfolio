@@ -189,4 +189,21 @@ header {
         background-color: var(--color-primary-purple);
         margin: 55px auto 93px;
     }
+
+    & .infos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 100px;
+        max-width: 1145px;
+
+        & div {
+            text-align: center;
+            margin: 0 auto;
+
+            & p {
+                margin-top: 20px;
+                max-width: 255px;
+            }
+        }
+    }
 }
