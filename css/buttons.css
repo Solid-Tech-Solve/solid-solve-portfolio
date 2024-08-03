@@ -21,4 +21,9 @@
     &.shadow {
         box-shadow: 0px 20px 30px 0px rgba(106, 16, 231, 0.15);
     }
+
+    &.light {
+        color: var(--color-primary-purple);
+        background-color: white;
+    }
 }

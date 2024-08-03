@@ -380,3 +380,36 @@ header {
     }
 
 }
+
+footer {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+    gap: 50px;
+    background-color: var(--color-primary-purple);
+    height: 135px;
+
+    & nav {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        display: grid;
+        gap: 52px;
+
+        & a {
+            text-decoration: none;
+            color: white !important;
+            text-align: center;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+
+    }
+    & button {
+        width: 186px;
+        height: 50px;
+    }
+}
