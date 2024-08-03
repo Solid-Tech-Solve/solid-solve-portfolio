@@ -3,6 +3,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 .solid-logo {
@@ -24,7 +25,6 @@ header {
         grid-auto-flow: column;
         align-items: center;
         gap: 46px;
-        
 
         & a {
             text-decoration: none;
@@ -32,6 +32,15 @@ header {
 
             &:hover {
                 color: var(--color-primary-purple);
+            }
+            
+        }
+
+        @media (width < 1230px) {
+            gap: 2vw;
+
+            & button::after {
+                display: none;
             }
         }
     }
@@ -47,6 +56,8 @@ header {
     display: grid;
     justify-content: center;
     padding-top: calc(121px + 60px);;
+    padding-left: 30px;
+    padding-right: 30px;
 
     & .content {
         max-width: 1230px;
@@ -79,7 +90,7 @@ header {
 
 .bg-section:nth-of-type(1) {
     display: grid;
-    padding: 62px 0 72px 0;
+    padding: 62px initial 72px initial;
     justify-content: center;
     gap: 63px;
 
@@ -90,10 +101,10 @@ header {
 
         &>div {
             padding-top: 53px;
+        }
 
-            & img {
-                margin-bottom: 12px;
-            }
+        & > img {
+            width: 584px
         }
 
         & h1 {
@@ -167,7 +178,8 @@ header {
     }
 }
 .bg-section:nth-of-type(4) {
-    padding: 85px 0px 120px 0px;
+    padding: 85px inherit 120px inherit;
+    padding-bottom: 120px;
 
     & .content {
         max-width: 1145px;
@@ -295,7 +307,7 @@ header {
 .bg-section:nth-of-type(7) {
     padding-bottom: 107px;
     margin: 0 auto;
-    
+    text-align: center;
 
     & .title img {
         top: -70px;
@@ -305,7 +317,6 @@ header {
         max-width: 222px;
         height: 50px;
         width: 100%;
-        margin: 0 auto;
     }
 
 }
@@ -390,6 +401,10 @@ footer {
     background-color: var(--color-primary-purple);
     height: 135px;
 
+    & img {
+        cursor: pointer;
+    }
+
     & nav {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 1fr;
@@ -400,6 +415,7 @@ footer {
             text-decoration: none;
             color: white !important;
             text-align: center;
+            font-size: 14px;
 
             &:hover {
                 opacity: 0.8;
