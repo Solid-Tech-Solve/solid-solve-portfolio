@@ -6,6 +6,11 @@
 @font-face {
     font-family: 'VAGRoundRegular';
     src: url('../fonts/VAGRoundedRegular.ttf') format('truetype');
+} 
+
+@font-face {
+    font-family: 'VAGRoundedNext';
+    src: url('../fonts/VAGRoundedNext.ttf') format('truetype');
 }
 
 .bg-section {
