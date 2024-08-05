@@ -15,16 +15,29 @@ header {
     grid-template-columns: auto 1fr;
     align-items: center;
     max-width: 1168px;
-    padding: 30px 40px 30px 40px;
+    padding: 30px 40px;
     background-color: white;
     border-radius: 6px;
     gap: 54px;
+
+    @media (width < 800px) {
+        padding: 20px 20px;
+    }
+
+    @media (width < 1230px) {
+        gap: 3vw;
+
+        & button::after {
+            display: none;
+        }
+    }
 
     & nav {
         display: grid;
         grid-auto-flow: column;
         align-items: center;
         gap: 46px;
+        white-space: nowrap;
 
         & a {
             text-decoration: none;
@@ -43,6 +56,16 @@ header {
                 display: none;
             }
         }
+
+        @media (width < 970px) {
+            & button {
+                display: none;
+            }
+        }
+
+        @media (width < 800px) {
+            display: none;
+        }
     }
 }
 
@@ -57,77 +80,83 @@ header {
     justify-content: center;
     padding-left: 30px;
     padding-right: 30px;
-
-    & .content {
-        max-width: 1230px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
-        & > div {
-            margin-top: 40px;;
-        }
-    }
-
-    & .title {
-        position: relative;
-        text-align: center;
-        margin-bottom: 79px;
-
-        & .heading.h2 {
-            position: inherit;
-            z-index: 3;
-        }
-        & img {
-            position: absolute;
-            top: -55px;
-            left: 50%;
-            z-index: 2;
-            transform: translateX(-50%);
-        }
-    }
+}
+.bg-section .content {
+    max-width: 1230px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.bg-section .content > div {
+    margin-top: 40px;;
+}   
+.bg-section .title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 79px;
+}
+.bg-section .title .heading.h2  {
+    position: inherit;
+    z-index: 3;
+}
+.bg-section .title img {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
 }
 
-.bg-section:nth-of-type(1) {
-    display: grid;
-    padding: 62px initial 72px initial;
-    justify-content: center;
+.section-1 {
     gap: 63px;
     padding-top: 64px;
     padding-bottom: 72px;
+}
 
-    & .content {
-        max-width: 1230px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+.section-1 .left-side {
+    margin-top: 53px;
+}
 
-        &>div {
-            padding-top: 53px;
-        }
+.section-1 .left-side h1 {
+    margin-bottom: 15px;
+}
 
-        & > img {
-            width: 584px
-        }
+.section-1 .left-side p {
+    max-width: 500px;
+    margin-bottom: 40px;
+}
 
-        & h1 {
-            margin-bottom: 15px;
-        }
+.section-1 .left-side button {
+    width: 222px;
+    height: 48px;
+    margin-bottom: 45px;
+}
 
-        & p {
-            max-width: 500px;
-            margin-bottom: 40px;
-        }
+.section-1 .socials {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 27px;
+}
 
-        & button {
-            width: 222px;
-            height: 48px;
-            margin-bottom: 45px;
-        }
-        
-        & .socials {
-            display: grid;
-            grid-template-columns: repeat(3, min-content);
-            gap: 27px;
-        }
+.section-1 .right-side {
+    margin: 0;
+    max-width: 584px
+}
+
+.section-1 .right-side img {
+    width: 100%;
+}
+
+@media (width < 800px) {
+    .section-1 {
+        gap: 0;
+        justify-content: initial;
+        padding: 20px 20px 79px 20px;
+    }
+    .section-1 .content {
+        grid-template-columns: 1fr;
+    }
+    .section-1 .right-side {
+        display: none;
     }
 }
 

@@ -28,8 +28,13 @@
     color: var(--color-primary-purple);
 
     &.h1 {
-        font-size: 60px !important;
+        font-size: 60px;
         line-height: 60px;
+
+        @media (width < 500px) {
+            font-size: 36px;
+            line-height: 36px;
+        }
     }
     &.h2 {
         font-size: 50px;
@@ -61,6 +66,11 @@
         font-size: 18px;
         line-height: 32px;
         color: var(--color-dark-gray);
+
+        @media (width < 500px) {
+            font-size: 16px;
+            line-height: 24px;
+        }
 
         &.small {
             font-size: 20px;
