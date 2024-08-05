@@ -202,43 +202,85 @@ header {
     }
 }
 
-.bg-section:nth-of-type(3) {
+.section-3 {
     padding-top: 204px;
     padding-bottom: 31px;
-    
-    & .content {
-        grid-template-columns: min-content 1fr;
-        gap: 72px;
+}
 
-        & > div {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: min-content min-content min-content min-content;
-            grid-template-areas: 
-                "item1 item1"
-                "grid-item-1 grid-item-2"
-                "grid-item-3 grid-item-4";
-            gap: 30px;
+.section-3 .content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 72px;
+}
 
-            & img {
-                margin-bottom: 10px;
-                width: 24px;
-                height: 24px;
-            }
+.section-3 .left-side img {
+    width: 100%;
+    margin-top: -37px;
+}
 
-            & button {
-                width: 237px;
-                height: 50px;
-            }
-        }
+.section-3 .right-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas: 
+        "item1 item1"
+        "grid-item-1 grid-item-2"
+        "grid-item-3 grid-item-4"
+        "button button";
+    gap: 30px;
+}
 
-        & p.default {
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-        & p.secondary {
-            margin-top: 10px;
-        }
+.section-3 .right-side img {
+    margin-bottom: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.section-3 .right-side button {
+    width: 237px;
+    height: 50px;
+}
+
+@media (width < 900px) {
+    .section-3 .content {
+        gap: 30px;
+    }
+    .section-3 .right-side {
+        gap: 30px;
+    }
+}
+@media (width < 800px) {
+    .section-3 .content {
+        grid-template-columns: 1fr;
+    }
+    .section-3 .left-side {
+        display: none;
+    }
+}
+
+@media (width < 500px) {
+    .section-3 {
+        padding-top: 160px;
+    }
+
+    .section-3 .title img {
+        top: -85px;
+    }
+
+    .section-3 .content {
+        gap: 0px;
+        text-align: center;
+    }
+
+    .section-3 .right-side {
+        grid-template-rows: repeat(6, min-content);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "item1"
+        "grid-item-1"
+        "grid-item-2"
+        "grid-item-3"
+        "grid-item-4"
+        "button";
     }
 }
 
