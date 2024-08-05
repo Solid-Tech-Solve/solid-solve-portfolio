@@ -39,6 +39,11 @@
     &.h2 {
         font-size: 50px;
         line-height: 50px;
+
+        @media (width < 500px) {
+            font-size: 26px;
+            line-height: 26px;
+        }
     }
     &.h3 {
         font-size: 40px;

@@ -13,9 +13,8 @@
     &.arrow-right::after {
         content: url('../assets/arrow-right.svg');
         margin-left: 15px;
-        /* transform: translateY(-50%); */
-        width: 20px; /* Ajuste o tamanho conforme necessário */
-        height: 20px; /* Ajuste o tamanho conforme necessário */
+        width: 20px;
+        height: 20px;
     }
 
     &.shadow {
