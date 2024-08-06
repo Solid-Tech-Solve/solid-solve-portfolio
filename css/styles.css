@@ -94,7 +94,7 @@ header {
     text-align: center;
     margin-bottom: 79px;
 }
-.bg-section .title .heading.h2  {
+.bg-section .title .heading.h2, .bg-section .title p  {
     position: inherit;
     z-index: 3;
 }
@@ -477,95 +477,133 @@ header {
     }
 }
 
-.bg-section:nth-of-type(7) {
+
+.section-7 {
     padding-top: 202px;
     padding-bottom: 107px;
     margin: 0 auto;
     text-align: center;
-
-    & .title img {
-        top: -70px;
-    }
-
-    & button {
-        max-width: 222px;
-        height: 50px;
-        width: 100%;
-    }
-
+}
+.section-7 button {
+    max-width: 222px;
+    height: 50px;
+    width: 100%;
 }
 
-.bg-section:nth-of-type(8) {
+.section-7 .title img {
+    top: -70px;
+}
+
+@media (width > 500px) and (width < 650px) {
+    .section-7 .title .heading.h2 {
+        font-size: 38px !important;
+    }
+}
+
+@media (width < 500px) {
+    .section-7 {
+        padding-top: 150px;
+    }
+    .section-7 .title .heading {
+        margin-bottom: 8px;
+    }
+    .section-7 .title img {
+        top: -90px;
+    }
+}
+.section-8 {
+    justify-content: initial !important;
     padding-top: 157px;
     padding-bottom: 171px;
-    margin: 0 auto;
-    
-
-    & .title img {
-        top: -70px;
-    }
-
-    & button {
-        max-width: 222px;
-        height: 50px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    & > div:nth-child(2) {
-        width: 1142px;
-    }
-
-    & .horizontal-bar {
-        width: 100%;
-        margin: 0 auto;
-        margin: 21px 0 41px;
-    }
-
-    & p,h5 {
-        text-align: center;
-    }
-
-    & form {
-        display: grid;
-        grid-template-columns: 2fr repeat(2, 1fr);
-        grid-template-rows: auto auto ;
-        grid-template-areas: 
-        "message message message"
-        "email name button";
-        gap: 10px 30px;
-        max-width: 850px;
-        margin: 46px auto 0;
-
-        & input {
-            text-decoration: none;
-            background-color: var(--color-secondary-purple);
-        }
-
-        & input, textarea {
-            padding: 14px 20px;
-            border: 2px solid var(--color-terciary-purple);
-            border-radius: 6px;
-            outline: none;
-            color: var(--color-terciary-purple);
-
-            &:hover {
-                border-color: var(--color-terciary-purple);
-            }
-
-            &::placeholder {
-                color: var(--color-terciary-purple);
-            }
-        }
-
-        & .message {
-            font-family: VAGRoundedNext;
-            font-weight: 100;
-            max-height: 146px;
-        }
-    }
-
+    justify-content: initial;
 }
+.section-8 .title img {
+    top: -70px;
+}
+
+.section-8 .content {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 1142px;
+    margin: 0 auto;
+}
+.section-8 .content button {
+    max-width: 222px;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+}
+.section-8 .horizontal-bar {
+    margin: 0 auto;
+    margin: 21px 0 4px;
+}
+.section-8 p, .section-8 h5 {
+    text-align: center;
+}
+#contact-form {
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    grid-template-rows: auto auto ;
+    grid-template-areas: 
+    "message message message"
+    "email name button";
+    gap: 10px 30px;
+    max-width: 815px;
+    margin: 46px auto 0;
+}
+#contact-form input {
+    text-decoration: none;
+    background-color: var(--color-secondary-purple);
+}
+#contact-form input, #contact-form textarea {
+    padding: 14px 20px;
+    border: 2px solid var(--color-terciary-purple);
+    border-radius: 6px;
+    outline: none;
+    color: var(--color-terciary-purple);
+
+    :hover {
+        border-color: var(--color-terciary-purple);
+    }
+    ::placeholder {
+        color: var(--color-terciary-purple);
+    }
+}
+#contact-form .message {
+    font-family: VAGRoundedNext;
+    font-weight: 100;
+    max-height: 146px;
+}
+@media (width < 550px) {
+    #contact-form {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas: 
+        "message"
+        "email" 
+        "name"
+        "button";
+    }
+    #contact-form button {
+        max-width: none;
+    }
+}
+
+
+@media (width < 500px) {
+    .section-8 {
+        padding-top: 90px;
+        padding-bottom: 100px;
+    }
+    .section-8 .title img {
+        top: -90px;
+    }
+    .section-8 .content .button {
+        height: fit-content;
+    }
+}
+
+
 
 footer {
     display: grid;
