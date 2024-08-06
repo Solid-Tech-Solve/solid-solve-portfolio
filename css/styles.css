@@ -284,47 +284,82 @@ header {
     }
 }
 
-.bg-section:nth-of-type(4) {
+.section-4 {
     padding-top: 85px;
     padding-bottom: 120px;
+}
 
-    & .content {
-        max-width: 1145px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+.section-4 .content {
+    max-width: 1145px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 
-        & > div {
-            margin-top: 40px;;
-        }
+.section-4 .right-side img {
+    width: 100%;
+}
 
-        & .placeholder {
-            margin: 17px 14px 32px;
-        }
+.section-4 .left-side {
+    margin-top: 40px;
+}
 
-        & p.default {
-            max-width: 370px;
-        }
+.section-4 .placeholder {
+    margin: 17px 14px 32px;
+}
+
+.section-4 p.default {
+    max-width: 370px;
+}
+
+.section-4 .horizontal-bar {
+    width: 80%;
+    margin: 55px auto 93px;
+}
+
+.section-4 .infos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    max-width: 1145px;
+}
+
+.section-4 .infos div {
+    text-align: center;
+}
+
+.section-4 .infos p {
+    margin: 20px auto 0px;
+    max-width: 255px;
+}
+
+@media (width < 800px) {
+    .section-4 {
+        padding-top: 20px
     }
-
-    & .horizontal-bar {
-        width: 80%;
-        margin: 55px auto 93px;
+    .section-4 .content {
+        grid-template-columns: 1fr;
     }
+    .section-4 .left-side {
+        text-align: center;
+    }
+    .section-4 .left-side p.default {
+        margin: 0 auto;
+        max-width: 450px;
+    }
+    .section-4 .right-side img {
+        display: none;
+    }
+    .section-4 .horizontal-bar {
+        margin: 0px auto 50px;
+    }
+}
 
-    & .infos {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 100px;
-        max-width: 1145px;
-
-        & div {
-            text-align: center;
-
-            & p {
-                margin: 20px auto 0px;
-                max-width: 255px;
-            }
-        }
+@media (width < 500px) {
+    .section-4 .infos p {
+        margin-top: 10px;
+    }
+    .section-4 .infos {
+        grid-template-columns: 1fr;
     }
 }
 
