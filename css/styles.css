@@ -424,55 +424,57 @@ header {
     }
 }
 
-
-.bg-section:nth-of-type(6) {
+.section-6 {
     padding-top: 146px;
     padding-bottom: 43px;
     margin: 0 auto;
-    
+}
+.section-6 .title img {
+    top: -80px;
+}
+.section-6 .content {
+    top: -80px;
+}
 
-    & .title img {
-        top: -80px;
+.section-6 .left-side img {
+    width: 100%;
+}
+.section-6 .infos-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, min-content);
+    gap: 9px;
+    margin-top: 91px;
+}
+.section-6 .infos-container > div {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: white;
+    padding: 40px 40px 20px;
+    border-radius: 6px;
+    gap: 25px;
+}
+.section-6 .infos-container .header {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 20px;
+    align-items: center;
+}
+.section-6 .infos-container .header img {
+    width: 60px;
+    height: 60px;
+    padding: 13px;
+    border-radius: 6px;
+    background-color: var(--color-secondary-purple);
+}
+
+@media (width < 800px) {
+    .section-6 .left-side {
+        display: none
     }
-
-    & .content {
-        gap: 28px;
-
-        & .infos-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(4, min-content);
-            gap: 9px;
-            margin-top: 91px;
-    
-            & > div {
-                display: grid;
-                grid-template-columns: auto;
-                background-color: white;
-                max-height: 192px;
-                padding: 40px 40px 20px;
-                border-radius: 6px;
-                gap: 25px;
-    
-                & .header {
-                    display: grid;
-                    grid-template-columns: min-content 1fr;
-                    gap: 20px;
-                    align-items: center;
-    
-                    & img {
-                        width: 60px;
-                        height: 60px;
-                        padding: 13px;
-                        border-radius: 6px;
-                        background-color: var(--color-secondary-purple);
-                    }
-    
-                }
-            }
-        }
+    .section-6 .content {
+        grid-template-columns: 1fr;
     }
-
 }
 
 .bg-section:nth-of-type(7) {
