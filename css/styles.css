@@ -49,6 +49,10 @@ header {
             
         }
 
+        & button {
+            max-width: 197px;
+        }
+
         @media (width < 1230px) {
             gap: 2vw;
 
@@ -64,8 +68,29 @@ header {
         }
 
         @media (width < 800px) {
-            display: none;
+            justify-content: flex-end;
+            
+            & button {
+                display: flex !important;
+
+                &::after {
+                    display: block;
+                }
+            }
         }
+
+        @media (width < 800px) {
+            & a {
+                display: none;
+            }
+        }
+    }
+    
+}
+
+@media (width < 800px) {
+    header .solid-button {
+        display: flex !important;
     }
 }
 
