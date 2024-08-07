@@ -10,6 +10,62 @@
     cursor: pointer;
 }
 
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    max-width: 1168px;
+    padding: 30px 40px;
+    background-color: white;
+    border-radius: 6px;
+    gap: 54px;
+}
+
+.nav-mobile {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, min-content);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    justify-content: center ;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 50px 20px;
+    text-align: center;
+    z-index: 4;
+    background-color: var(--color-primary-purple);
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+
+
+    &.opened {
+        transform: translateX(0);
+    }
+
+    & a {
+        text-decoration: none;
+        cursor: pointer;
+        
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    & .close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
 .menu-button {
     width: 40px;
     height: 40px;
@@ -20,136 +76,83 @@
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-
-@media (width > 800px) {
-    .menu-button {
-        display: none;
-    }
-    & .nav-mobile {
-        display: none;
-    }
-}
-
-@media (width > 300px) {
-    .nav-mobile {
-        display: none;
-    }
-}
-
-/* .nav-mobile {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 15px;
-    grid-template-rows: repeat(6, min-content);
-    position: fixed;
-    background-color: var(--color-primary-purple);
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    justify-content: center ;
-    align-items: flex-start;
-    padding: 100px 20px;
-    text-align: center;
-    z-index: 3;
-
-    & a {
-        text-decoration: none;
-        
-    }
-
-    & .close {
-        position: absolute;
-    }
-} */
-
-
-
 .menu-button:hover {
     background-color: #836FF9;
 }
 
-header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    max-width: 1168px;
-    padding: 30px 40px;
-    background-color: white;
-    border-radius: 6px;
-    gap: 54px;
+@media (width > 800px) {
+    .nav-mobile {
+        display: none;
+    }
+    .menu-button {
+        display: none;
+    }
+}
 
-    @media (width < 800px) {
+.nav-desktop {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 46px;
+    white-space: nowrap;
+}
+
+.nav-desktop a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+.nav-desktop a:hover {
+    color: var(--color-primary-purple);
+}
+.nav-desktop button {
+    max-width: 197px;
+}
+
+@media (width < 1230px) {
+    header {
+        gap: 3vw;
+    }
+
+    header button::after {
+        display: none;
+    }
+
+    .nav-desktop {
+        gap: 2vw;
+    }
+    .nav-desktop button::after {
+        display: none;
+    }
+}
+
+
+@media (width < 970px) and (width > 800px) {
+    .nav-desktop button {
+        display: none;
+    }
+}
+
+@media (width < 800px) {
+    header {
         padding: 20px 20px;
     }
-
-    @media (width < 1230px) {
-        gap: 3vw;
-
-        & button::after {
-            display: none;
-        }
+    .nav-desktop {
+        grid-template-columns: 1fr min-content;
     }
-
-    & nav.nav-desktop {
-        display: grid;
-        grid-auto-flow: column;
-        align-items: center;
-        gap: 46px;
-        white-space: nowrap;
-
-        & a {
-            text-decoration: none;
-            color: rgba(0, 0, 0, 0.5);
-
-            &:hover {
-                color: var(--color-primary-purple);
-            }
-            
-        }
-
-        & button {
-            max-width: 197px;
-        }
-
-        @media (width < 1230px) {
-            gap: 2vw;
-
-            & button::after {
-                display: none;
-            }
-        }
-
-        @media (width < 970px) {
-            & button {
-                display: none;
-            }
-        }
-
-        @media (width < 800px) {
-            justify-content: flex-end;
-            
-            & button {
-                display: flex ;
-
-                &::after {
-                    display: block;
-                }
-            }
-        }
-
-        @media (width < 800px) {
-            & a {
-                display: none;
-            }
-        }
-        @media (width < 500px) {
-            & button {
-                display: none;
-            }
-        }
+    .nav-desktop button {
+        justify-self: flex-end;
     }
-    
+    .nav-desktop button::after {
+        display: none;
+    }
+    .nav-desktop a {
+        display: none;
+    }
+}
+@media (width < 500px) {
+    .nav-desktop button {
+        display: none;
+    }
 }
 
 .horizontal-bar {
