@@ -99,6 +99,7 @@
             font-size: 16px;
             line-height: 28px;
         }
+        
     }
     &.secondary {
         font-family: 'VAGRoundRegular';
@@ -119,5 +120,8 @@
     & strong {
         color: var(--color-primary-purple);
         font-weight: 400;
+    }
+    &.white {
+        color: white;
     }
 }
