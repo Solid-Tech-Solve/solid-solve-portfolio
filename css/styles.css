@@ -153,6 +153,9 @@ header {
     .nav-desktop button {
         display: none;
     }
+    .nav-desktop {
+        justify-items: flex-end;
+    }
 }
 
 .horizontal-bar {
@@ -525,12 +528,16 @@ header {
 .section-6 .left-side img {
     width: 100%;
 }
+.section-6 .content .left-side, .section-6 .content .left-side > div {
+    margin: 0;
+}
+
 .section-6 .infos-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, min-content);
     gap: 9px;
-    margin-top: 91px;
+    margin-top: 91px !important;
 }
 .section-6 .infos-container > div {
     display: grid;
