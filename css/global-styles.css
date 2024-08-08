@@ -14,8 +14,8 @@
 }
 
 @font-face {
-    font-family: 'VAGRoundedLightTest';
-    src: url('../fonts/VAGRoundedLightTest.ttf') format('truetype');
+    font-family: 'VAGRoundedLight';
+    src: url('../fonts/VAGRoundedLight.ttf') format('truetype');
 }
 
 .bg-section {
@@ -110,8 +110,8 @@
         
     }
     &.secondary {
-        font-family: 'VAGRoundRegular';
-        font-weight: 300;
+        font-family: 'VAGRoundLight';
+        font-weight: 400;
         font-size: 18px;
         line-height: 28px;
         color: var(--color-light-gray);
