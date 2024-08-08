@@ -22,6 +22,9 @@
     &.primary {
         background-color: var(--bg-primary);
     }
+    &.primary-gradient {
+        background: linear-gradient(to bottom, rgba(242, 245, 255, 0.42), rgba(243, 238, 255, 1));
+    }
     &.secondary {
         background-color: var(--bg-secondary);
     }
