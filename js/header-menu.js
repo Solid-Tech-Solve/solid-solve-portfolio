@@ -18,7 +18,5 @@ const changeHeader = (string) => {
     let divTest2 = document.querySelector("#div-test")
     divTest2.innerText = string
     console.log(divTest2)
-
 }
-
-
+changeHeader(window.devicePixelRatio)

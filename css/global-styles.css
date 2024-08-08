@@ -14,8 +14,8 @@
 }
 
 @font-face {
-    font-family: 'PLUSRoundedRegular';
-    src: url('../fonts/PLUSRoundedRegular.ttf') format('truetype');
+    font-family: 'VAGRoundedLightTest';
+    src: url('../fonts/VAGRoundedLightTest.ttf') format('truetype');
 }
 
 .bg-section {
