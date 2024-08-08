@@ -8,3 +8,4 @@ closeButton.addEventListener('click', () => toggleMenuMobile())
 const toggleMenuMobile = () => {
     navMobile.classList.toggle('opened')
 }
+
