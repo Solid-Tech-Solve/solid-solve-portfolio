@@ -317,6 +317,9 @@ header {
         "button button";
     gap: 30px;
 }
+.section-3 .right-side div:first-of-type {
+    margin-bottom: 20px;
+}
 
 .section-3 .right-side img {
     margin-bottom: 10px;
@@ -401,7 +404,7 @@ header {
 }
 
 .section-4 .horizontal-bar {
-    width: 80%;
+    width: 80.34%;
     margin: 55px auto 93px;
 }
 
@@ -410,9 +413,6 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     max-width: 1145px;
-}
-
-.section-4 .infos div {
     text-align: center;
 }
 
@@ -537,7 +537,7 @@ header {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, min-content);
     gap: 9px;
-    margin-top: 91px !important;
+    margin-top: 91px;
 }
 .section-6 .infos-container > div {
     display: grid;
@@ -560,6 +560,9 @@ header {
     border-radius: 6px;
     background-color: var(--color-secondary-purple);
 }
+.section-6 .infos-container .typography.default strong {
+    font-size: 21px;
+}
 
 @media (width < 800px) {
     .section-6 .left-side {
@@ -567,6 +570,9 @@ header {
     }
     .section-6 .content {
         grid-template-columns: 1fr;
+    }
+    .section-6 .infos-container {
+        margin-top: 30px;
     }
 }
 

@@ -19,4 +19,4 @@ const changeHeader = (string) => {
     divTest2.innerText = string
     console.log(divTest2)
 }
-changeHeader(window.devicePixelRatio)
+// changeHeader(window.devicePixelRatio)
