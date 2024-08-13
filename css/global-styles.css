@@ -42,13 +42,13 @@
     color: var(--color-primary-purple);
 
     &.h1 {
-        font-size: 3.75em;
-        line-height: 3.75rem;
+        font-size: 60px;
+        line-height: 60px;
 
-        /* @media (width < 500px) {
+        @media (width < 500px) {
             font-size: 36px;
             line-height: 36px;
-        } */
+        }
     }
 
     &.h2 {
