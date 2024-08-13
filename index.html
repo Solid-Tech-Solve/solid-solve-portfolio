@@ -1,13 +1,18 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Solid Solve</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/root.css">
     <link rel="stylesheet" href="css/global-styles.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/buttons.css">
+    <link rel="preload" href="css/root.css">
+    <link rel="preload" href="css/global-styles.css">
+    <link rel="preload" href="css/styles.css">
+    <link rel="preload" href="css/buttons.css">
 </head>
 <body>
     <section class="bg-section section-1 primary-gradient">
@@ -15,21 +20,21 @@
             <img class="solid-logo" src="./assets/solid-logo.svg" alt="">
             <nav class="nav-mobile">
                 <img class="close" src="./assets/close-icon.svg" alt="">
-                <a class="typography default white">Início</a>
-                <a class="typography default white">Solução</a>
-                <a class="typography default white">Beneficios</a>
-                <a class="typography default white">Tecnologias</a>
-                <a class="typography default white">Quem Somos</a>
-                <a class="typography default white">Contato</a>
+                <a class="typography default white" href="#">Home</a>
+                <a class="typography default white" href="#solution">Solution</a>
+                <a class="typography default white" href="#benefits">Benefits</a>
+                <a class="typography default white" href="#technologies">Technologies</a>
+                <a class="typography default white" href="#about-us">Who we are</a>
+                <a class="typography default white" href="#contact">Contact</a>
             </nav>
             <nav class="nav-desktop">
-                <a class="typography extra-small" href="#">Início</a>
-                <a class="typography extra-small" href="#">Solução</a>
-                <a class="typography extra-small" href="#">Beneficios</a>
-                <a class="typography extra-small" href="#">Tecnologias</a>
-                <a class="typography extra-small" href="#">Quem Somos</a>
-                <a class="typography extra-small" href="#">Contato</a>
-                <button class="solid-button arrow-right">Marcar uma Call</button>
+                <a class="typography extra-small" href="#">Home</a>
+                <a class="typography extra-small" href="#solution">Solution</a>
+                <a class="typography extra-small" href="#benefits">Benefits</a>
+                <a class="typography extra-small" href="#technologies">Technologies</a>
+                <a class="typography extra-small" href="#about-us">Who we are</a>
+                <a class="typography extra-small" href="#contact">Contact</a>
+                <button class="solid-button arrow-right">Schedule a call</button>
                 <img class="menu-button" src="./assets/menu icon.svg" alt="">
             </nav>
         </header>
@@ -37,13 +42,13 @@
             <div class="left-side">
                 <img src="./assets/solid-logo-illustration.svg" alt="">
                 <h1 class="heading h1">
-                    Soluções <br> Tecnológicas <br>
-                    Eficientes e Sólidas 
+                    Technological <br> Solutions <br>
+                    Efficient and Solid 
                 </h1>
                 <p class="typography default">
                     Datang kuliah terlambat karena ketiduran itu tidak masalah; datang kuliah karena lupa jadwal itu sangatlah tidak keren.
                 </p>
-                <button class="solid-button shadow">Marcar uma Call</button>
+                <button class="solid-button shadow">Schedule a call</button>
                 <div class="socials shadow">
                     <a href=""><img src="./assets/twitter.svg" alt=""></a>
                     <a href=""><img src="./assets/linkedin.svg" alt=""></a>
@@ -58,7 +63,7 @@
 
     <section class="bg-section section-2 secondary">
         <div class="title">
-            <h2 class="heading h2">Quem confia na solid</h2>
+            <h2 class="heading h2">Who trusts solid</h2>
             <img src="./assets/title-illustration.svg" alt="">
         </div>
         <div class="partners">
@@ -74,8 +79,8 @@
 
     <section class="bg-section section-3 secondary">
         <div class="title">
-            <h2 class="heading h2">Nossas Soluções</h2>
-            <img src="./assets/title2-illustration.svg" alt="">
+            <h2 class="heading h2">Our Solutions</h2>
+            <img id="solution" src="./assets/title2-illustration.svg" alt="">
         </div>
         <div class="content">
             <div class="left-side">
@@ -84,60 +89,58 @@
             <div class="right-side">
                 <div style="grid-area: item1;" class="">
                     <h1 style="grid-area: item1;" class="heading h4">
-                        Soluções Digitais de Ponta a Ponta resolvidas com eficiencia
+                        End-to-end digital solutions solved efficiently
                     </h1>
                     <p class="typography default">
-                        Abrangendo desde a concepção e desenvolvimento até a implementação e suporte.
+                        Covering everything from design and development to implementation and support.
                     </p>
                 </div>
 
                 <div style="grid-area: grid-item-1;">
                     <img src="./assets/solid-logo-square.svg" alt="">
-                    <h6 class="heading h6">Produtos Digitais</h6>
+                    <h6 class="heading h6">Digital Products</h6>
                     <p class="typography secondary extra-small">
-                        Criamos produtos digitais inovadores, como aplicativos móveis e plataformas web, focando em resolver desafios específicos e melhorar a eficiência com soluções de alta qualidade e experiência excepcional para os usuários.
-                    </p>
+                        We create innovative digital products, such as mobile applications and web platforms, focusing on solving specific challenges and improving efficiency with high-quality solutions and exceptional user experiences.                    </p>
                 </div>
                 <div style="grid-area: grid-item-2;">
                     <img src="./assets/solid-logo-square.svg" alt="">
-                    <h6 class="heading h6">Front End e Design</h6>
+                    <h6 class="heading h6">Front End and Design</h6>
                     <p class="typography secondary extra-small">
-                        A Solid Solve desenvolve interfaces intuitivas e estéticas, unindo design moderno e tecnologia avançada para uma experiência de usuário excepcional.
+                        Solid Solve develops intuitive and aesthetic interfaces, combining modern design and advanced technology for an exceptional user experience.
                     </p>
                 </div>
                 <div style="grid-area: grid-item-3;">
                     <img src="./assets/solid-logo-square.svg" alt="">
-                    <h6 class="heading h6">Back-End e Estruturação</h6>
+                    <h6 class="heading h6">Back-End and Structuring</h6>
                     <p class="typography secondary extra-small">
-                        A Solid Solve cria soluções robustas para a base tecnológica, garantindo sistemas eficientes e escaláveis que suportam operações complexas com alta performance e confiabilidade.
-Consultoria de Tecnologias
+                        Solid Solve creates robust solutions for the technological base, guaranteeing efficient and scalable systems that support complex operations with high performance and reliability.
+Technology Consulting
                     </p>
                 </div>
                 <div style="grid-area: grid-item-4;">
                     <img src="./assets/solid-logo-square.svg" alt="">
-                    <h6 class="heading h6">Consultoria de Tecnologias</h6>
+                    <h6 class="heading h6">Technology Consulting</h6>
                     <p class="typography secondary extra-small">
-                        Fornecemos  consultoria em tecnologias, oferecendo orientação especializada para otimizar a implementação e uso de soluções tecnológicas, garantindo que as estratégias e ferramentas estejam alinhadas com os objetivos de negócios e maximizem a eficiência e inovação
-                    </p>
+                        We provide technology consulting, offering expert guidance to optimize the implementation and use of technological solutions, ensuring that strategies and tools are aligned with business objectives and maximize efficiency and innovation.                    </p>
                 </div>
                 <a style="grid-area: button;" href="#contact">
-                    <button class="solid-button">FALE CONOSCO</button>
+                    <button class="solid-button">CONTACT US</button>
                 </a>
             </div>
             
         </div>
     </section>
 
-    <section class="bg-section section-4 primary">
+    <section class="bg-section section-4 primary" id="benefits">
         <div class="content">
             <div class="left-side">
 
                 <h2 class="heading h2">
-                    Nossos<br>Beneficios
+                    Our<br>Benefits
                 </h2>
                 <img class="placeholder" src="./assets/placeholder.svg" alt="">
                 <p class="typography default">
-                    <strong>Conheça</strong> um pouco dos <strong>benefícios</strong> de trabalhar com a <strong>Solid Solve</strong>, estamos sempre prontos para executar de forma eficiente
+                    <strong>Get to know</strong> some of the <strong>benefits</strong> of working with <strong>Solid Solve</strong>, At Solid Solve, we are always ready to perform efficiently
                 </p>
 
 
@@ -150,22 +153,21 @@ Consultoria de Tecnologias
 
         <div class="infos">
             <div class="">
-                <h5 class="heading h5">Processos Centralizados</h5>
+                <h5 class="heading h5">Centralized processes</h5>
                 <p class="typography secondary">
-                    A Solid Solve utiliza processos centralizados para garantir decisões unificadas, gestão de qualidade consistente e coordenação eficaz entre equipes
+                    Solid Solve uses centralized processes to ensure unified decisions, consistent quality management and effective coordination between teams                </p>
+            </div>
+            <div class="">
+                <h5 class="heading h5">Safety and reliability</h5>
+                <p class="typography secondary">
+                    We ensure security and reliability with robust data protection practices
                 </p>
             </div>
             <div class="">
-                <h5 class="heading h5">Segurança e Confiabilidade</h5>
+                <h5 class="heading h5">Agility to Create</h5>
                 <p class="typography secondary">
-                    Asseguramos segurança e confiabilidade com práticas robustas de proteção de dados
-                </p>
-            </div>
-            <div class="">
-                <h5 class="heading h5">Agilidade para Criar</h5>
-                <p class="typography secondary">
-                    A Solid Solve é ágil na criação de soluções devido ao uso de metodologias ágeis, equipe experiente, processos eficientes, ferramentas avançadas e comunicação 
-                    clara com os clientes
+                    Solid Solve is agile in creating solutions due to the use of agile methodologies, an experienced team, efficient processes, advanced tools and 
+                    communication with customers
                 </p>
             </div>
         </div>
@@ -173,8 +175,8 @@ Consultoria de Tecnologias
     
     <section class="bg-section section-5 secondary">
         <div class="title">
-            <h2 class="heading h2">Tecnologias</h2>
-            <img src="./assets/title6-illustration.svg" alt="">
+            <h2 class="heading h2">Technology</h2>
+            <img id="technologies" src="./assets/title6-illustration.svg" alt="">
         </div>
 
         <div class="infos-container">
@@ -184,9 +186,9 @@ Consultoria de Tecnologias
                 <div class="">
                     <h6 class="heading h6">Mobile</h6>
                     <p class="typography default extra-small">
-                        Com ampla experiência em desenvolvimento mobile, a Solid Solve foca em criar 
-                        aplicações intuitivas, responsivas e de alto desempenho. Nossas soluções são projetadas 
-                        para atender às necessidades específicas de cada cliente, garantindo escalabilidade e segurança.
+                        With extensive experience in mobile development, Solid Solve focuses on creating 
+                        intuitive, responsive and high-performance applications. Our solutions are designed 
+                        to meet the specific needs of each client, guaranteeing scalability and security.
                     </p>
                 </div>
             </div>
@@ -196,8 +198,8 @@ Consultoria de Tecnologias
                 <div class="">
                     <h6 class="heading h6">Front-End</h6>
                     <p class="typography default extra-small">
-                        Com a Solid Solve, você obtém o desenvolvimento da parte visual 
-                        e interativa do seu software ou site, assegurando uma interação otimizada entre os usuários e a interface.
+                        With Solid Solve, you get the development of the visual 
+                        and interactive part of your software or website, ensuring optimal interaction between users and the interface.
                     </p>
                 </div>
             </div>
@@ -205,10 +207,10 @@ Consultoria de Tecnologias
             <div class="info">
                 <img class="" src="./assets/reload.svg" alt="">
                 <div class="">
-                    <h6 class="heading h6">Testes</h6>
+                    <h6 class="heading h6">Tests</h6>
                     <p class="typography default extra-small">
-                        Na Solid Solve, conduzimos análises, avaliações e verificações precisas em sistemas, aplicativos e software, 
-                        com o propósito de identificar e corrigir falhas, assegurando a qualidade, segurança e desempenho dos produtos tecnológicos.
+                        At Solid Solve, we carry out precise analyses, assessments and checks on systems, applications and software, 
+                        in order to identify and correct faults, ensuring the quality, safety and performance of technological products.
                     </p>
                 </div>
             </div>
@@ -218,8 +220,8 @@ Consultoria de Tecnologias
                 <div class="">
                     <h6 class="heading h6">Back-End</h6>
                     <p class="typography default extra-small">
-                        A Solid Solve é especialista no desenvolvimento de APIs e projetos de integração, 
-                        oferecendo soluções robustas e escaláveis para otimizar fluxos de trabalho e assegurar a interoperabilidade entre diversas tecnologias.
+                        Solid Solve specializes in developing APIs and integration projects, 
+                        offering robust and scalable solutions to optimize workflows and ensure interoperability between different technologies.
                     </p>
                 </div>
             </div>
@@ -229,8 +231,8 @@ Consultoria de Tecnologias
                 <div class="">
                     <h6 class="heading h6">Data</h6>
                     <p class="typography default extra-small">
-                        A Solid Solve especializa-se em fornecer soluções tecnológicas para a coleta, armazenamento, processamento e análise de grandes 
-                        volumes de dados, ajudando a obter insights valiosos e informações estratégicas que apoiam a tomada de decisões.
+                        Solid Solve specializes in providing technological solutions for the collection, storage, processing and analysis of large 
+                        volumes of data, helping to obtain valuable insights and strategic information that support decision-making.
                     </p>
                 </div>
             </div>
@@ -240,8 +242,8 @@ Consultoria de Tecnologias
                 <div class="">
                     <h6 class="heading h6">Cloud Computing</h6>
                     <p class="typography default extra-small">
-                        Na Solid Solve, implementamos soluções Cloud sob medida para GCP, Azure e AWS, 
-                        priorizando eficiência, segurança e escalabilidade. Garantimos um acompanhamento dedicado e uma equipe certificada para sua empresa.
+                        At Solid Solve, we implement tailor-made Cloud solutions for GCP, Azure and AWS, 
+                        prioritizing efficiency, security and scalability. We guarantee dedicated support and a certified team for your company.
                     </p>
                 </div>
             </div>
@@ -251,24 +253,21 @@ Consultoria de Tecnologias
 
     <section class="bg-section section-6 primary">
         <div class="title">
-            <h2 class="heading h2">Sobre a Solid</h2>
-            <img src="./assets/title4-illustration2.svg" alt="">
+            <h2 class="heading h2">About Solid</h2>
+            <img id="about-us" src="./assets/title4-illustration2.svg" alt="">
         </div>
 
-        <div class="content">
+        <div class="content" id="about-us">
             <div class="left-side">
                 <img src="./assets/illustration4.svg" alt="">
             </div>
 
             <div class="infos-container">
-                <!-- <h2 class="heading h3">
-                    A Solid Solve é uma consultoria global
-                </h2> -->
                 <p class="typography default">
-                    <strong>A Solid Solve é uma consultoria global</strong> que se destaca por acelerar negócios com uma equipe ágil e 
-                    altamente qualificada. Atuamos em todas as etapas do desenvolvimento de soluções digitais, 
-                    desde a concepção até a entrega. Nosso foco na inovação e excelência permite oferecer soluções de alto 
-                    impacto que atendem às necessidades específicas dos nossos clientes e impulsionam seus negócios com eficiência e precisão.
+                    <strong>Solid Solve is a global consultancy</strong> which stands out for accelerating business with an agile and 
+                    highly qualified team. We work at all stages of developing digital solutions, 
+                    from conception to delivery. Our focus on innovation and excellence allows us to offer high-impact solutions that 
+                    that meet the specific needs of our clients and drive their business forward with efficiency and precision.
                 </p>
             </div>   
         </div>
@@ -277,14 +276,14 @@ Consultoria de Tecnologias
 
     <section class="bg-section section-7 secondary">
         <div class="title">
-            <h2 class="heading h2">Quer Trabalhar conosco?</h2>
-            <p class="typography default small">Entre em contato, vamos adorar <br>
-                ter você no time</p>
+            <h2 class="heading h2">Want to work with us?</h2>
+            <p class="typography default small">Get in touch, we'd love to <br>
+                having you on the team</p>
             <img src="./assets/title5-illustration.svg" alt="">
         </div>
 
         <a href="#contact">
-            <button class="solid-button">ENVIE UM EMAIL</button>
+            <button class="solid-button">SEND AN EMAIL</button>
         </a>
     </section>
 
@@ -292,7 +291,7 @@ Consultoria de Tecnologias
         
         <div class="content">
             <div class="title">
-                <h2 class="heading h2">Contato</h2>
+                <h2 class="heading h2">Contact</h2>
                 <img src="./assets/title2-illustration.svg" alt="">
             </div>
             
@@ -300,14 +299,14 @@ Consultoria de Tecnologias
 
             <div id="contact" class="">
     
-                <h5 class="heading h5">Vamos entrar em Contato</h5>
-                <p class="typography secondary">Mande nos uma mensagem com suas duvidas</p>
+                <h5 class="heading h5">Let's get in touch</h5>
+                <p class="typography secondary">Send us a message with your questions</p>
     
                 <form id="contact-form" action="">
-                    <textarea class="message" style="grid-area: message;" name="message" placeholder="Digite a mensagem" id="" cols="30" rows="10"></textarea>
-                    <input  style="grid-area: email;" name="email" placeholder="Seu Email" type="text">
-                    <input  style="grid-area: name;" name="name" placeholder="Seu Nome" type="text">
-                    <button style="grid-area: button;" class="solid-button submit-button" type="submit">ENVIAR EMAIL</button>
+                    <textarea class="message" style="grid-area: message;" name="message" placeholder="Type the message" id="" cols="30" rows="10"></textarea>
+                    <input  style="grid-area: email;" name="email" placeholder="Your Email" type="text">
+                    <input  style="grid-area: name;" name="name" placeholder="Your Name" type="text">
+                    <button style="grid-area: button;" class="solid-button submit-button" type="submit">SEND EMAIL</button>
                 </form>
             </div>
         </div>
@@ -317,13 +316,13 @@ Consultoria de Tecnologias
     <footer>
         <img src="./assets/solidsolve-logo.svg" alt="">
         <nav>
-            <a  class="typography default white home" href="">HOME</a>
-            <a  class="typography default white solucao" href="">SOLUÇÕES</a>
-            <a  class="typography default white beneficio" href="">BENEFICIOS</a>
-            <a  class="typography default white tecnologia" href="">TECNOLOGIAS</a>
-            <a  class="typography default white contato" href="">CONTATO</a>
+            <a  class="typography default white home" href="#home">HOME</a>
+            <a  class="typography default white solucao" href="#solution">SOLUTIONS</a>
+            <a  class="typography default white beneficio" href="#benefits">BENEFITS</a>
+            <a  class="typography default white tecnologia" href="#technologies">TECHNOLOGIES</a>
+            <a  class="typography default white contato" href="#contact">CONTACT US</a>
         </nav>
-        <button class="solid-button light" type="submit">FALE CONOSCO</button>
+        <button class="solid-button light" type="submit">CONTACT US</button>
     </footer>
 
     <script src="./js/header-menu.js"></script> 
