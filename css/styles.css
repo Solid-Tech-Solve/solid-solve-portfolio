@@ -21,6 +21,10 @@ header {
     gap: 54px;
 }
 
+nav {
+    white-space: nowrap;
+}
+
 .nav-mobile {
     display: grid;
     grid-template-columns: auto;
