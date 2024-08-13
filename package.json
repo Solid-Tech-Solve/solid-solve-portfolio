@@ -1,0 +1,19 @@
+{
+  "name": "solid-solve-portfolio",
+  "version": "1.0.0",
+  "description": "Solid solve main page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Solid-Tech-Solve/solid-solve-portfolio.git"
+  },
+  "author": "Everton Trajano,Saagaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Solid-Tech-Solve/solid-solve-portfolio/issues"
+  },
+  "homepage": "https://github.com/Solid-Tech-Solve/solid-solve-portfolio#readme"
+}
