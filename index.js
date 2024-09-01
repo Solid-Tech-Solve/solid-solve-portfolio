@@ -1,6 +1,5 @@
 import { createReadStream, createWriteStream, existsSync, mkdirSync, readFileSync } from 'node:fs';
 import { pipeline } from 'stream/promises';
-import { loadEnvFile } from 'node:process';
 import { join, resolve } from 'node:path';
 import { createGzip, createBrotliCompress } from 'node:zlib';
 import { cp, rm } from 'node:fs/promises';
