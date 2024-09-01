@@ -58,11 +58,6 @@ async function* performSvg(chunk) {
             const [got, fileRef] = result
             if (!isEager) {
                 cp(resolve(ENTRY_DIR, fileRef), resolve(OUTPUT_DIR, fileRef), { recursive: true })
-                // setTimeout(() => pipeline(
-                //     Readable.from(content.split('\n')),
-                //     chooseCompression('brotli'),
-                //     createWriteStream()
-                // ), 0)
                 return line
             };
             const className = /class=["']([\d\w]*)["'] /.exec(line)
@@ -114,7 +109,6 @@ async function main() {
         performCss,
         performSvg,
         performJS,
-        chooseCompression(''),
         createWriteStream(join(OUTPUT_DIR, OUTPUT_FILE + ''))
     )
 }
