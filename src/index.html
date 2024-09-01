@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GWQGFNP7P"></script>
-    <script>
+    <script async type="module" src="https://www.googletagmanager.com/gtag/js?id=G-9GWQGFNP7P"></script>
+    <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
 
@@ -53,7 +53,7 @@
                 <a class="typography extra-small" href="#technologies">Technologies</a>
                 <a class="typography extra-small" href="#about-us">Who we are</a>
                 <a class="typography extra-small" href="#contact">Contact</a>
-                <button class="solid-button arrow-right">Schedule a call</button>
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });" class="solid-button arrow-right">Schedule a call</button>
                 <img class="menu-button" src="./assets/menu-icon.svg" alt="">
             </nav>
         </header>
@@ -321,10 +321,10 @@ Technology Consulting
                 <h5 class="heading h5">Let's get in touch</h5>
                 <p class="typography secondary">Send us a message with your questions</p>
     
-                <form id="contact-form" action="">
-                    <textarea class="message" style="grid-area: message;" name="message" placeholder="Type the message" id="" cols="30" rows="10"></textarea>
-                    <input  style="grid-area: email;" name="email" placeholder="Your Email" type="text">
-                    <input  style="grid-area: name;" name="name" placeholder="Your Name" type="text">
+                <form id="contact-form" name="sendContact" action="">
+                    <textarea class="message" style="grid-area: message;" name="message" required ="Type the message" id="" cols="30" rows="10"></textarea>
+                    <input  style="grid-area: email;" name="email" placeholder="Your Email" required ="text">
+                    <input  style="grid-area: name;" name="name" placeholder="Your Name" required type="text">
                     <button style="grid-area: button;" class="solid-button submit-button" type="submit">SEND EMAIL</button>
                 </form>
             </div>
@@ -335,7 +335,7 @@ Technology Consulting
     <footer>
         <img src="./assets/solidsolve-logo.svg" alt="">
         <nav>
-            <a  class="typography default white home" href="#home">HOME</a>
+            <a  class="typography default white home" href="#">HOME</a>
             <a  class="typography default white solucao" href="#solution">SOLUTIONS</a>
             <a  class="typography default white beneficio" href="#benefits">BENEFITS</a>
             <a  class="typography default white tecnologia" href="#technologies">TECHNOLOGIES</a>
@@ -346,9 +346,31 @@ Technology Consulting
 
     <script async defer type="module" src="./js/header-menu.js"></script>
     <script async defer type="module">
-       
+        /** 
+         * @param {SubmitEvent} event
+         */
+        async function onSendContact(event) {
+            event.preventDefault();
+            event.stopPropagation();
 
-        
+            const data = new FormData(event.target);
+            const obj = {name: data.get('name'), email: data.get('email'), message: data.get('message')};
+            if(!obj.name || !obj.email || !obj.message) return;
+
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Basic ODg4ZWYxODEtYTdjOC00N2E5LTk5NmYtNDk3ZGUwN2FhYzVjOkRQbkNhU3k0UUR6MHVHaTJ2YjNjVzNQaFpHaE1kempacnZYdUFwSkFCOFhOZ1lMQ21YamVKT1lBVXc5UzBxVUo='
+                },
+                body: JSON.stringify(obj)
+            };
+
+            fetch('https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-17da4e56-3393-4bf3-9942-317261cb6e26/email/sendContact', options)
+            .then(response => console.log(response))
+            .catch(err => console.error(err));
+        } 
+        document.forms['sendContact'].addEventListener('submit',onSendContact)
     </script>
 </body>
 </html>
