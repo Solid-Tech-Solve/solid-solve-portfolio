@@ -114,8 +114,8 @@ async function main() {
         performCss,
         performSvg,
         performJS,
-        chooseCompression('brotli'),
-        createWriteStream(join(OUTPUT_DIR, OUTPUT_FILE + '.br'))
+        chooseCompression(''),
+        createWriteStream(join(OUTPUT_DIR, OUTPUT_FILE + ''))
     )
 }
 
