@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "npm install --omit=dev",
+    "prepublish": "echo 'vou publicar'",
     "publish": "node .",
-    "postpublish": "echo 'published'",
+    "postpublish": "echo 'publicado'",
     "build": "npm run publish"
   },
   "repository": {
@@ -20,8 +20,5 @@
   "bugs": {
     "url": "https://github.com/Solid-Tech-Solve/solid-solve-portfolio/issues"
   },
-  "homepage": "https://github.com/Solid-Tech-Solve/solid-solve-portfolio#readme",
-  "dependencies": {
-    "dotenv": "^16.4.5"
-  }
+  "homepage": "https://github.com/Solid-Tech-Solve/solid-solve-portfolio#readme"
 }
