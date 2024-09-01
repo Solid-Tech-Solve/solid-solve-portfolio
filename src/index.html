@@ -4,24 +4,34 @@
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GWQGFNP7P"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
 
-    gtag('config', 'G-9GWQGFNP7P');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9GWQGFNP7P');
+        const firebaseConfig = {
+          apiKey: "AIzaSyDIjJWaKa8HNxXAsc8p3JRLBbL-AAJYXgw",
+          authDomain: "solid-solve-env.firebaseapp.com",
+          projectId: "solid-solve-env",
+          storageBucket: "solid-solve-env.appspot.com",
+          messagingSenderId: "464286300428",
+          appId: "1:464286300428:web:2c19392e36afbf49e7b129",
+          measurementId: "G-9GWQGFNP7P"
+        };
+      
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
     </script>
 
     <meta charset="UTF-8">
     <title>Solid Solve</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="prefetch" href="css/styles.css">
-    <link rel="preload" href="css/global-styles.css">
-    <link rel="preload" href="css/root.css">
-    <link rel="preload" href="css/buttons.css">
-    <link rel="stylesheet" href="css/root.css">
-    <link rel="stylesheet" href="css/global-styles.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="./css/root.css">
+    <link rel="stylesheet" href="./css/global-styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/buttons.css">
 </head>
 <body>
     <section class="bg-section section-1 primary-gradient">
@@ -44,12 +54,12 @@
                 <a class="typography extra-small" href="#about-us">Who we are</a>
                 <a class="typography extra-small" href="#contact">Contact</a>
                 <button class="solid-button arrow-right">Schedule a call</button>
-                <img class="menu-button" src="./assets/menu icon.svg" alt="">
+                <img class="menu-button" src="./assets/menu-icon.svg" alt="">
             </nav>
         </header>
         <div class="content">
             <div class="left-side">
-                <img src="./assets/solid-logo-illustration.svg" alt="">
+                <img loading="eager" src="./assets/solid-logo-illustration.svg" alt="">
                 <h1 class="heading h1">
                     Technological <br> Solutions <br>
                     Efficient and Solid 
@@ -65,7 +75,7 @@
                 </div>
             </div>
             <div class="right-side">
-                <img src="./assets/menina1.svg" alt="">
+                <img src="./assets/menina1.svg" loading="eager" alt="">
             </div>
         </div>
     </section>
@@ -73,7 +83,7 @@
     <section class="bg-section section-2 secondary">
         <div class="title">
             <h2 class="heading h2">Who trusts solid</h2>
-            <img src="./assets/title-illustration.svg" alt="">
+            <img src="./assets/title-illustration.svg" loading="eager" alt="">
         </div>
         <div class="partners">
             <img src="./assets/logo.svg" alt="">
@@ -335,25 +345,10 @@ Technology Consulting
     </footer>
 
     <script async defer type="module" src="./js/header-menu.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GWQGFNP7P">
-        
-    </script>
     <script async defer type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
+       
 
-        const firebaseConfig = {
-          apiKey: "AIzaSyDIjJWaKa8HNxXAsc8p3JRLBbL-AAJYXgw",
-          authDomain: "solid-solve-env.firebaseapp.com",
-          projectId: "solid-solve-env",
-          storageBucket: "solid-solve-env.appspot.com",
-          messagingSenderId: "464286300428",
-          appId: "1:464286300428:web:2c19392e36afbf49e7b129",
-          measurementId: "G-9GWQGFNP7P"
-        };
-      
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+        
     </script>
 </body>
 </html>

@@ -191,7 +191,7 @@ nav {
     position: inherit;
     z-index: 3;
 }
-.bg-section .title img {
+.bg-section .title :is(img,svg) {
     position: absolute;
     top: -55px;
     left: 50%;
