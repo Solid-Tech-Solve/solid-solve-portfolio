@@ -322,7 +322,7 @@ Technology Consulting
                 <p class="typography secondary">Send us a message with your questions</p>
     
                 <form id="contact-form" name="sendContact" action="">
-                    <textarea class="message" style="grid-area: message;" name="message" required ="Type the message" id="" cols="30" rows="10"></textarea>
+                    <textarea class="message" style="grid-area: message;" name="message" required placeholder="Type the message" cols="30" rows="10"></textarea>
                     <input  style="grid-area: email;" name="email" placeholder="Your Email" required ="text">
                     <input  style="grid-area: name;" name="name" placeholder="Your Name" required type="text">
                     <button style="grid-area: button;" class="solid-button submit-button" type="submit">SEND EMAIL</button>
@@ -367,7 +367,7 @@ Technology Consulting
             };
 
             fetch('https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-17da4e56-3393-4bf3-9942-317261cb6e26/email/sendContact', options)
-            .then(response => console.log(response))
+            .then(() => event.target.dispatchEvent(new Event('reset')))
             .catch(err => console.error(err));
         } 
         document.forms['sendContact'].addEventListener('submit',onSendContact)
