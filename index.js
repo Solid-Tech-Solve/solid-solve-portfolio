@@ -5,8 +5,9 @@ import { join, resolve } from 'node:path';
 import { createGzip, createBrotliCompress } from 'node:zlib';
 import { cp, rm } from 'node:fs/promises';
 import { Readable } from 'node:stream';
+import { config } from 'dotenv';
 
-loadEnvFile('./.env');
+config()
 const cssRegex = RegExp(/\<link.*rel=.stylesheet..*(.*)\>/);
 const svgRegex = RegExp(/\<img.*(.svg).*\>/);
 const jsRegex = RegExp(/\<script.*src=.*\>/);
