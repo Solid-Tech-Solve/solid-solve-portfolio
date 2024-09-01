@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "echo 'vou publicar'",
+    "prepublish": "npm install --production",
     "publish": "node .",
-    "postpublish": "echo 'publicado'",
+    "postpublish": "echo 'published'",
     "build": "npm run publish"
   },
   "repository": {
